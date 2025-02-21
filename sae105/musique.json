@@ -1,0 +1,45 @@
+[
+    {
+        "musique": "Heart to Heart",
+        "descriptionMusicale": "Un morceau indie-pop doux et intime, caractéristique du style de Mac DeMarco. Avec sa voix apaisante et des guitares mélodieuses, il explore les thèmes de la vulnérabilité et de l'amour sincère.",
+        "fichierAudio": "musique/heart-to-heart-3.mp3",
+        "image" : "image/hearttoheart.jpeg",
+        "youtube" : "https://www.youtube.com/watch?v=qBoQzo98EpQ",
+        "spotify" : "https://open.spotify.com/intl-fr/track/7EAMXbLcL0qXmciM5SwMh2"
+
+    },
+    {
+        "musique": "Chest Pain (I Love)",
+        "descriptionMusicale": "Chest Pain (I Love) est un morceau que j’ai adoré. La dynamique de la musique est super, elle capte instantanément l’attention et reste addictive. Les paroles, quant à elles, sont vraiment touchantes et résonnent vraiment. C’est le genre de chanson qui me touche à chaque écoute.",
+        "fichierAudio": "musique/chestpain.mp3",
+        "image" : "image/malcolmtodd.jpeg",
+        "youtube" : "https://www.youtube.com/watch?v=dTS_aNfpbIM",
+        "spotify" : "https://open.spotify.com/intl-fr/album/5LmuMAA2Qk4SDbdFK5kvnJ"
+
+    },
+    {
+        "musique": "Like Him",
+        "descriptionMusicale": "C'est une musique qui m’impacte directement. Les paroles, qui parlent du manque de figure paternelle, prennent tout leur sens au fur et à mesure de la chanson. L’évolution de l’histoire à travers la musique est frappante, et cette réflexion sincère sur son père résonne profondément. C’est un morceau qui raconte une histoire émotive et qui reste gravé.",
+        "fichierAudio": "musique/like-him.mp3",
+        "image" : "image/LikeHim.jpeg",
+        "youtube" : "https://www.youtube.com/watch?v=dgUHE8wWhiE",
+        "spotify" : "https://open.spotify.com/intl-fr/track/6jbYpRPTEFl1HFKHk1IC0m"
+
+    },
+    {
+        "musique": "Romantic Homicide",
+        "descriptionMusicale": "Cette musique a une énergie unique. Les paroles, qui parlent de relations compliquées, sont puissantes et sincères. La progression de la musique, de calme à plus intense, amplifie l'émotion et te garde captivé du début à la fin. Un morceau qui reste en tête.",
+        "fichierAudio": "musique/romantic-homicide.mp3",
+        "image" : "image/romanticHomicide.jpeg",
+        "youtube" : "https://www.youtube.com/watch?v=eKL3TceSxvk",
+        "spotify" : "https://open.spotify.com/intl-fr/track/1xK59OXxi2TAAAbmZK0kBL"
+    },
+    {   
+        "musique": "Love is only a feeling",
+        "descriptionMusicale": "Cette musique a une dynamique rapide qui rend le son super accrocheur. J’aime aussi la façon dont Joey Bada$$ rappe, et quand la dame prend la parole au milieu, ça fait vraiment écho au message du morceau. C’est un son qui capte l’attention.",
+        "fichierAudio": "musique/loveisonly.mp3" ,
+        "image" : "image/onlyafeeling.jpg",
+        "youtube" : "https://www.youtube.com/watch?v=93ufch_2mfw",
+        "spotify" : "https://open.spotify.com/intl-fr/track/7umZiitjVsEjMQ6HNddpUI"
+    }
+]

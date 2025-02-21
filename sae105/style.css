@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 1.8rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-image: url('image/fondetoile.webp');
+}
+
+header {
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.musique-container {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.musique-container:hover {
+    transform: scale(1.05);
+}
+
+.titre-musique {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.9),
+        0 0 3px rgba(255, 255, 255, 0.8),
+        0 0 4px rgba(255, 255, 255, 0.7);
+}
+
+.musique-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.musique-image {
+    max-width: 280px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.musique-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-break: break-word; /*j'ai reussis a avoir ce code grace au site MDN*/
+}
+
+.musique-description p {
+    text-shadow:
+        0 0 2px rgba(255, 255, 255, 0.9),
+        0 0 3px rgba(255, 255, 255, 0.8),
+        0 0 4px rgba(255, 255, 255, 0.7);
+}
+
+.musique-description audio {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.logos {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.logos img {
+    width: 60px;
+    height: auto;
+}
+
+.lien-musique {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.lien-musique img {
+    width: 60px;
+    height: auto;
+}
+
+.button {
+    background-color: #6a4c9c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    width: 90px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.button:hover {
+    background-color: #3a2652;
+}
+
+.section1, .section2, .section3, .section4, .section5 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+}
+
+.section1 {
+    background-image: url('image/ciellumiere.jpg');
+}
+
+.section2 {
+    background-image: url('image/murlovEHAUT.webp');
+}
+
+.section3 {
+    background-image: url('image/FondJournal.webp');
+}
+
+.section4 {
+    background-image: url('image/roseblanche.jpg');
+}
+
+.section5 {
+    background-image: url('image/rosenoire.jpg');
+}
+
+#formulaire-musique {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 40px;
+    max-width: 1100px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+#formulaire-musique:hover {
+    transform: scale(1.02);
+}
+
+#formulaire-musique label {
+    font-size: 1.6rem;  
+    margin-bottom: 8px;
+    display: block;
+}
+
+#formulaire-musique input, #formulaire-musique textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#formulaire-musique textarea {
+    resize: none;
+}
+
+#formulaire-musique button {
+    background-color: #6a4c9c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+#formulaire-musique button:hover {
+    background-color: #3a2652;
+}
+
+span {
+    color: red;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #f8f9fa;
+    padding: 40px 20px;
+    font-size: 1.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+footer div {
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+
+footer a {
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer .lien-exterieur {
+    color: #9b59b6;
+}
+
+footer .lien-exterieur:hover {
+    text-decoration: underline #9e0196;
+    color: #dc91ff;
+}
+
+footer a[href^="mailto:"] {
+    color: #dc91ff;
+}
+
+footer a[href^="mailto:"]:hover {
+    text-decoration: underline #f791dd;
+    color: #ffb7f9;  
+}
+
+footer a[href*="youtube"], 
+footer a[href*="spotify"] {
+    color: #007bff;
+}
+
+footer a[href*="youtube"]:hover,
+footer a[href*="spotify"]:hover {
+    text-decoration: underline #0059ff;
+    color: #007bff;
+}
+
+.credits-container {
+    width: 60%;
+    margin: 5px auto;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.toggle-footer {
+    bottom: 20px;
+    right: 20px;
+    padding: 18px 35px; 
+    font-size: 20px;
+    background-color: #6a4c9c;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.credits .auteurs, .credits .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /*gap decouvert avec le site de la mdn*/
+}
+
+.musique-dynamique {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.musique-dynamique .musique-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.musique-dynamique .musique-image {
+    max-width: 280px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sélection musicale</title>
+    <link rel="icon" href="image/favicon.png" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Sélection Musicale de Adam</h1>
+        <br>
+        <br>
+        <h3><em>Voici ici ma sélection musicale avec 5 morceaux qui m'ont tous particulièrement touché.</em></h3>
+    </header>
+    <main>
+        <div class="liste-musiques"></div>
+        <form id="formulaire-musique">
+            <p><em>Les champs marqués d'un <span>*</span> sont obligatoires.</em></p>
+            
+            <label for="email">Adresse Email <span>*</span>:</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>
+           
+            <label for="titre">Titre de la musique (50 caractères maximum) <span>*</span> :</label>
+            <input type="text" id="titre" name="titre" placeholder="Entrez le titre ici (50 caractères maximum)" required maxlength="50">
+            
+            <label for="descriptionMusique">Description (600 caractères maximum) <span>*</span> :</label>
+            <textarea id="descriptionMusique" name="descriptionMusique" placeholder="Entrez une description ici (limite de 600 caractères)" maxlength="600" required></textarea>
+            
+            <label for="imageClipFile">Choisir une <strong>image</strong> <span>*</span> :</label>
+            <input type="file" id="imageClipFile" name="imageClipFile" accept="image/*" required>
+            
+            <label for="audioFile">Choisir un fichier <strong>Audio</strong><span>*</span> :</label>
+            <input type="file" id="audioFile" name="audioFile" accept="audio/*" required>
+        
+            <label for="youtubeLink">Lien vers YouTube (facultatif) :</label>
+            <input type="url" id="youtubeLink" name="youtubeLink" placeholder="Entrez le lien YouTube">
+            
+            <label for="spotifyLink">Lien vers Spotify (facultatif) :</label>
+            <input type="url" id="spotifyLink" name="spotifyLink" placeholder="Entrez le lien Spotify">
+            
+            <button type="submit">Ajouter</button>
+        </form>
+        
+        
+        
+    </main>
+
+    <button class="toggle-footer">Afficher les crédits</button>
+
+
+    <div class="credits-container hidden">
+        <footer>
+            <div class="auteurs">
+                <h2>Crédit des auteurs</h2>
+                <a href="https://en.wikipedia.org/wiki/Mac_DeMarco" target="_blank" class="lien-exterieur">MAC DEMARCO</a>
+                <a href="https://genius.com/artists/Malcolm-todd" target="_blank" class="lien-exterieur">MALCOLM TODD</a>
+                <a href="https://en.wikipedia.org/wiki/Tyler,_the_Creator" target="_blank" class="lien-exterieur">TYLER THE CREATOR</a>
+                <a href="https://en.wikipedia.org/wiki/D4vd" target="_blank" class="lien-exterieur">D4VD</a>
+                <a href="https://en.wikipedia.org/wiki/Joey_Badass#" target="_blank" class="lien-exterieur">JOEY BADASS</a>
+            </div>
+        
+            <div class="sources-musique-image">
+                <h2>Sources des musiques et images</h2>
+                <ul>
+                    <li><a href="https://www.youtube.com" target="_blank" class="lien-exterieur" style="color: blue;">YouTube</a></li>
+                    <li><a href="https://www.spotify.com" target="_blank" class="lien-exterieur" style="color: blue;">Spotify</a></li>
+                </ul>
+            </div>
+        
+            <div class="credits-autres">
+                <h2>Crédit des autres</h2>
+                <ul>
+                    <li><strong>Propriétaire du site :</strong> Adam Kassioui<br>Contact : <a href="mailto:adam.kassioui@edu.univ-eiffel.fr">adam.kassioui@edu.univ-eiffel.fr</a></li>
+                    <li><strong>Hébergement :</strong> Le site est hébergé par l'Université Gustave Eiffel, située à Cité Descartes, Champs-sur-Marne.</li>
+                    <li><strong>Propriété des contenus :</strong> Les éléments présents sur ce site (images, musiques, logos, etc.) sont utilisés à des fins pédagogiques et ne sont pas destinés à un usage commercial. Tous les droits sur ces contenus appartiennent à leurs auteurs respectifs, notamment YouTube, Spotify, et autres plateformes.</li>
+                    <li><strong>Liens vers des services externes :</strong> Le site contient des liens vers des services tiers, tels que YouTube et Spotify. Nous déclinons toute responsabilité quant à leur contenu.</li>
+                    <li><strong>Protection des données personnelles :</strong> Les informations collectées sur ce site sont traitées dans un fichier sécurisé par l'Université Gustave Eiffel. Vous pouvez demander leur modification ou suppression, en contactant l’adresse suivante : <a href="mailto:adam.kassioui@edu.univ-eiffel.fr">adam.kassioui@edu.univ-eiffel.fr</a>.</li>
+                    <li><strong>Propriété intellectuelle des contenus :</strong> Les éléments du site, notamment les fichiers audio, images et codes, respectent les lois sur le droit d’auteur. Toute utilisation ou reproduction des contenus présents sur ce site (textes, images, vidéos, etc.) nécessite une autorisation préalable.</li>
+                    <li><strong>Gestion des données personnelles (RGPD) :</strong> Nous n’effectuons aucune collecte de données personnelles sans consentement. Pour plus de détails sur vos droits et la gestion de vos données, veuillez consulter le site de la <a href="https://www.cnil.fr/fr" target="_blank" class="lien-exterieur">CNIL</a>.</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".toggle-footer");
+            const creditsContainer = document.querySelector(".credits-container");
+            /*Ici j'avais vraiment du mal a faire le bouton donc j'ai envoyer la base que j'avais a l'IA elle a ma aider , je me suis encore une fois servis de la MDN*/
+            toggleButton.addEventListener("click", function () {
+                if (creditsContainer.style.display === "") {
+                    creditsContainer.style.display = "block";
+                    toggleButton.textContent = "Masquer les crédits";
+                    creditsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+                } else if (creditsContainer.style.display === "none") {
+                    creditsContainer.style.display = "block";
+                    toggleButton.textContent = "Masquer les crédits";
+                    creditsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+                } else {
+                    creditsContainer.style.display = "none";
+                    toggleButton.textContent = "Afficher les crédits";
+                }
+            });
+        });
+
+
+
+            /*Fonction pour activer les boutons un peu partout dans le code*/
+            function activerBoutons() {
+                var buttons = document.querySelectorAll(".button");
+                var audios = document.querySelectorAll(".Musique-play");
+    
+                buttons.forEach(function (button, index) {
+                    var audio = audios[index];
+    
+                    button.addEventListener('click', function () {
+                        if (audio.paused) {
+                            audios.forEach(function (AutreSon, otherIndex) {
+                                if (AutreSon !== audio) {
+                                    AutreSon.pause();
+                                    buttons[otherIndex].textContent = '⏵';
+                                }
+                            });
+                            audio.play();
+                            button.textContent = '⏸';
+                        } else {
+                            audio.pause();
+                            button.textContent = '⏵';
+                        }
+                    });
+    
+                    audio.addEventListener('ended', function () {
+                        button.textContent = '⏵';
+                    });
+                });
+            }
+            fetch('musique.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    var numCase = 1;
+                    var liste_musique = document.querySelector(".liste-musiques");
+
+                    data.forEach(function (musique) {
+                        var classeContainer = "section" + numCase;
+                        var musiqueHTML = '<section class="musique-container ' + classeContainer + '">' +
+                            '<h2 class="titre-musique">' + musique.musique + '</h2>' +
+                            '<div class="musique-content">' +
+                                '<img class="musique-image" src="' + musique.image + '" alt="Image de la musique ' + musique.musique + '">' +
+                                '<div class="musique-description">' +
+                                    '<p>' + musique.descriptionMusicale + '</p>' +
+                                    '<audio class="Musique-play" src="' + musique.fichierAudio + '"></audio>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="logos">' +
+                                '<a href="' + musique.youtube + '" target="_blank" class="lien-exterieur">' +
+                                    '<img src="image/youtube.png" alt="YouTube" title="Écouter sur YouTube" class="logo">' +
+                                '</a>' +
+                                '<a href="' + musique.spotify + '" target="_blank" class="lien-exterieur">' +
+                                    '<img src="image/spotify.png" alt="Spotify" title="Écouter sur Spotify" class="logo">' +
+                                '</a>' +
+                            '</div>' +
+                            '<button class="button">⏵</button>' +
+                        '</section>';
+                        liste_musique.innerHTML += musiqueHTML;
+                        numCase += 1;
+                    });
+                    activerBoutons();
+
+                    var lienExterieur = document.querySelectorAll('.lien-exterieur');
+                    lienExterieur.forEach(function (lien) {
+                        lien.addEventListener('click', function (quitter_site) {
+                            var confirmation = confirm("Vous allez être redirigé(e) en dehors de ce site. ÊTES-VOUS sûr(e) de vouloir continuer ?");
+                            if (!confirmation) {
+                                quitter_site.preventDefault();
+                            }
+                        });
+                    });
+                }) 
+                .catch(function (error) { /*Le .catch , je l'ai decouvert dans la mdn et je me suis dis que c'etait une bonne idee de le mettre ici car ca recupere l'erreur super facilement*/
+                    console.error('Erreur lors du chargement des musiques:', error);
+                });
+
+            var formulaireMusique = document.getElementById('formulaire-musique');
+            formulaireMusique.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                var email = document.getElementById('email').value;
+                var titre = document.getElementById('titre').value;
+                var description = document.getElementById('descriptionMusique').value;
+                var audioFile = document.getElementById('audioFile').files[0]; /* Pour les var audioFile avec les .files[0] c'est l'intelligence artificielle qui ma montré à quoi ça servait et pourquoi c'était nécessaire dans mon code*/
+                var imageClipFile = document.getElementById('imageClipFile').files[0];
+
+                var youtubeLink = document.getElementById('youtubeLink').value;
+                var spotifyLink = document.getElementById('spotifyLink').value;
+
+                if (!(email && titre && description && imageClipFile && audioFile)) {
+                    alert("Veuillez remplir tous les champs obligatoires.");
+                    return;
+                }
+
+
+                var url = 'https://perso-etudiant.u-pem.fr/~gambette/portrait/api.php?format=json&login=kassioui&courriel=' + email + '&titre=' + titre + '&description=' + description + '&audioFileName=' + audioFile.name + '&imageFileName=' + imageClipFile.name + '&message=' + description;
+                /*ici pour la creation de cela , je n'y arrivais pas seul et j'ai donc demander de l'aide a mes camarades , une fois une sorte de base etablie l'intelligence artificielle ma permis de finaliser ces 2 ligne pour Youtube et Spotify*/
+                if (youtubeLink) {
+                    url += '&youtubeLink=' + youtubeLink;
+                }
+                if (spotifyLink) {
+                    url += '&spotifyLink=' + spotifyLink;
+                }
+
+                console.log("URL générée :", url);
+
+                fetch(url)
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        console.log('Réponse de lAPI :', data);
+                        alert('Données envoyées avec succès !'); /*le alert que j'ai decouvert sur le site de la MDN a ete vraiment tres utile dans ce code !*/
+
+                        /* Pour ces 2 lignes avec le URL.createObjectURl j'ai utilisé le site de la MDN mais aussi de stackoverflow pour avoir une meilleure vue sur l'utilité de ce code*/
+                        var imageURL = URL.createObjectURL(imageClipFile);
+                        var audioURL = URL.createObjectURL(audioFile);
+                        var nouvelleRubrique = '<section class="musique-container musique-dynamique">' +
+                            '<h2 class="titre-musique">' + titre + '</h2>' +
+                            '<div class="musique-content">' +
+                                '<img class="musique-image" src="' + imageURL + '" alt="Image de ' + titre + '" />' +
+                                '<div class="musique-description">' +
+                                    '<p>' + description + '</p>' +
+                                    '<audio class="Musique-play" src="' + audioURL + '"></audio>' +
+                                    '<button class="button dynamique-button">⏵</button>';
+                        if (youtubeLink) {
+                            nouvelleRubrique += '<a href="' + youtubeLink + '" target="_blank" class="lien-musique youtube-logo"><img src="image/youtube.png" alt="YouTube"></a>';
+                        }
+                        if (spotifyLink) {
+                            nouvelleRubrique += '<a href="' + spotifyLink + '" target="_blank" class="lien-musique spotify-logo"><img src="image/spotify.png" alt="Spotify"></a>';
+                        }
+                        document.querySelector('.liste-musiques').innerHTML += nouvelleRubrique;
+                        formulaireMusique.reset();
+
+                        activerBoutons();
+                    });
+            });
+            </script>
